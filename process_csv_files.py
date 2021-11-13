@@ -41,7 +41,7 @@ src_input_path= path_run + src_dir_name
 tgt_output_path = path_run + tgt_dir_name
 
 #-----------------------------------------------
-# Callign main method
+# Callign main method - for stand alone run
 #-----------------------------------------------
 
 get_files_to_process(src_input_path, tgt_output_path)
