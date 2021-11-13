@@ -36,7 +36,7 @@ def get_files_to_process(source_folder, output_file_path):
 #-----------------------------------------------
 
 src_dir_name = r'\source_input_files'
-tgt_dir_name = r'\processed_files\final_Combined_sarah2.csv'
+tgt_dir_name = r'\processed_files\final_Combined.csv'
 src_input_path= path_run + src_dir_name
 tgt_output_path = path_run + tgt_dir_name
 
