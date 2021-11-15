@@ -21,31 +21,33 @@ e. We will be running the code on our end once it is submitted, please have the 
 To Run this program successfully, please note:
 --> Make sure to use a running environment configured with Python 3.x compatible, and able to load/import supporting libraries
 
---> Copy program folder (and its contents) into your workign directory - prefereable a location able to read/write
+--> Copy program folder (and its contents) into your working directory - preferable a location able to read/write
 
 --> Place/Update source files to process into folder: "source_input_files"
 
 --> Once program has executed, find output file located inside folder "processed_output"
 
 
----> To Run Main Program from command prompt, execute followign command:
-        python process_csv_files.py
+---> To Run Main Program from command prompt, execute following command:
+
+                python process_csv_files.py
 
 ---> to Run Test Cases from command prompt, execute following command:
-        python test_process_csv_files.py
+
+                python test_process_csv_files.py
 
 
---> Note1: the input format expected is csv, any other format (xsl, txt, etc.) won't be processed
+--> Note1: the input format expected is csv, any other format (xls, txt, etc.) won't be processed
 
 --> Note2: This program was written using Visual Studio Code and Python 3.8 in a windows 10 PC.
             But in case of opening and running Main Program or Test Cases in another IDE, 
-            please load content of root folder into the Python IDE of your choise and follow 
+            please load content of root folder into the Python IDE of your choice and follow 
             code execution steps accordingly to such IDE.
 
 
-Disclaimer: the content of this repo and the logic provided within the current phthon programs enclosed
-            is intended to be used to showcase concepts related to the use of python for Data Engineering,
-            with the aim of a job interview or an accademic evaluation.
-
-            The author does not take any responsibility of any unexpected results of running these programs 
-            outside of such aforemention contexts
+Disclaimer: **The content of this repo and the logic provided within the current python programs enclosed 
+              is intended to be used to showcase concepts related to the use of python for Data Engineering, 
+              with the aim of a job interview or an academic evaluation.** 
+            
+Disclaimer: **The author does not take any responsibility of any unexpected results 
+              of running these programs outside of such aforementioned contexts**
