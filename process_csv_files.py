@@ -1,3 +1,7 @@
+#-----------------------------------------------
+# Importing Libraries
+#-----------------------------------------------
+
 import pandas as pd
 import csv
 import os
@@ -7,10 +11,15 @@ from string import digits
 
 #-----------------------------------------------
 # Base variables and Initial Global Settings
+# and Setup variables for Running
 #-----------------------------------------------
 
 path_run = os.path.dirname(__file__)
 path_rejected = path_run + '\\rejected_files\\'
+src_dir_name = r'\source_input_files'
+tgt_dir_name = r'\processed_files\final_Combined.csv'
+src_input_path= path_run + src_dir_name
+tgt_output_path = path_run + tgt_dir_name
 
 #-----------------------------------------------
 # Proccessing list of files in source folder
@@ -30,15 +39,6 @@ def get_files_to_process(source_folder, output_file_path):
                     writer.writerow((row[0], env_name.removesuffix('.csv')))
             # else:
             #    shutil.move(path_rejected + files, files)
-
-#-----------------------------------------------clear
-# Setup variables for Running
-#-----------------------------------------------
-
-src_dir_name = r'\source_input_files'
-tgt_dir_name = r'\processed_files\final_Combined.csv'
-src_input_path= path_run + src_dir_name
-tgt_output_path = path_run + tgt_dir_name
 
 #-----------------------------------------------
 # Callign main method - for stand alone run

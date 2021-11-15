@@ -1,7 +1,7 @@
 # file-processing-poc
 PoC to showcase data processing in python
 
-Current Python code  traverses through the files in the "source_input_files" folder and generates the output file "combined.csv" file in folder "processe_files"
+Current Python code  traverses through the files in the "source_input_files" folder and generates the output file "combined.csv" file in folder "processed_files"
 
 The PoC is intended to fulfill below requirements:
 

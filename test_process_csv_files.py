@@ -1,26 +1,31 @@
-'''
-Unit tests for get_files_to_process module. Uses test_source_ip_files.csv as test data.
-'''
-
-#from process_csv_files import get_files_to_process
+#-----------------------------------------------
+# Unit tests for get_files_to_process module. 
+# -> below Unit Tests are intended to validate
+# -> both soure and target locations 
+# -> used by test_source_ip_files.py
+#-----------------------------------------------
 
 import unittest
+import os
+from process_csv_files import src_input_path, tgt_output_path
 
-class TestStringMethods(unittest.TestCase):
+#-----------------------------------------------
+# Setup variables for Running
+#-----------------------------------------------
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+test_path_run = os.path.dirname(__file__)
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
+#-----------------------------------------------
+# Setup Test Cases for source and destination
+#-----------------------------------------------
 
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
+class TestSrcPath(unittest.TestCase):
+
+    def test_src_path(self):
+        self.assertTrue(test_path_run + r'\source_input_files' == src_input_path, "Should be " + src_input_path)
+ 
+    def test_tgt_path(self):
+        self.assertTrue(test_path_run + r'\processed_files\final_Combined.csv' == tgt_output_path, "Should be " + tgt_output_path)    
 
 if __name__ == '__main__':
     unittest.main()
