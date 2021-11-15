@@ -1,47 +1,54 @@
-#-----------------------------------------------
+#----------------------------------------------------
+# Python prgram to process csv files:
+# -> Below program is intended to showcase some 
+#    Python functionalities to process data 
+#    from csv files.
+#
+#    The program needs to process a new incoming file
+#    and set its identifies by file name prefix 
+#----------------------------------------------------
+
+#----------------------------------------------------
 # Importing Libraries
-#-----------------------------------------------
+#----------------------------------------------------
 
 import pandas as pd
 import csv
 import os
-import pathlib
-import shutil
-from string import digits
+from pathlib import Path
 
-#-----------------------------------------------
+#----------------------------------------------------
 # Base variables and Initial Global Settings
 # and Setup variables for Running
-#-----------------------------------------------
+#----------------------------------------------------
 
 path_run = os.path.dirname(__file__)
-path_rejected = path_run + '\\rejected_files\\'
-src_dir_name = r'\source_input_files'
-tgt_dir_name = r'\processed_files\final_Combined.csv'
+src_dir_name = '\source_input_files'
+tgt_file_name = '\processed_output\\Combined.csv'
 src_input_path= path_run + src_dir_name
-tgt_output_path = path_run + tgt_dir_name
+tgt_output_path = path_run + tgt_file_name
 
-#-----------------------------------------------
-# Proccessing list of files in source folder
-#-----------------------------------------------
+#----------------------------------------------------
+# Function to Proccess files in source folder
+#----------------------------------------------------
 
-def get_files_to_process(source_folder, output_file_path):
+def get_process_ip_details(source_folder, output_file_path):
     files = os.listdir(source_folder)
-    textfiles = [file for file in files if file.endswith(".csv") or file.endswith('.txt')]
+    textfiles = [file for file in files if file.endswith(".csv")]
     with open (output_file_path, 'w', newline='') as outfile:
         writer = csv.writer(outfile)
         writer.writerow(('Source IP','Environment'))
         for files in textfiles:
-            if files.endswith('csv'):
                 df_file = pd.read_csv(os.path.join(source_folder,files), delimiter= None if files.endswith('csv') else '\t')
                 for index, row in df_file.iterrows():
                     env_name = "".join(filter(lambda x: not x.isdigit(), files))
                     writer.writerow((row[0], env_name.removesuffix('.csv')))
-            # else:
-            #    shutil.move(path_rejected + files, files)
 
-#-----------------------------------------------
-# Callign main method - for stand alone run
-#-----------------------------------------------
+#----------------------------------------------------
+# Triggering main method - for stand alone run
+#----------------------------------------------------
 
-get_files_to_process(src_input_path, tgt_output_path)
+if Path(src_input_path).is_dir():
+    get_process_ip_details(src_input_path, tgt_output_path)
+else:
+    print('Double Check Source Path')
