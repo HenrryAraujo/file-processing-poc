@@ -20,8 +20,11 @@ e. We will be running the code on our end once it is submitted, please have the 
 
 To Run this program successfully, please note:
 --> Make sure to use a running environment configured with Python 3.x compatible, and able to load/import supporting libraries
+
 --> Copy program folder (and its contents) into your workign directory - prefereable a location able to read/write
+
 --> Place/Update source files to process into folder: "source_input_files"
+
 --> Once program has executed, find output file located inside folder "processed_output"
 
 
@@ -33,6 +36,7 @@ To Run this program successfully, please note:
 
 
 --> Note1: the input format expected is csv, any other format (xsl, txt, etc.) won't be processed
+
 --> Note2: This program was written using Visual Studio Code and Python 3.8 in a windows 10 PC.
             But in case of opening and running Main Program or Test Cases in another IDE, 
             please load content of root folder into the Python IDE of your choise and follow 
