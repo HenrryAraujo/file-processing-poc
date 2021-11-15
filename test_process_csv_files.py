@@ -1,8 +1,8 @@
 #----------------------------------------------------
 # Unit tests class for the process_csv_files module:
 # -> Below Unit Tests are intended to validate
-#    both soure and target locations used by the
-#    main fucntion in program process_csv_files.py
+#    both source and target locations used by the
+#    main function in program process_csv_files.py
 #----------------------------------------------------
 
 #----------------------------------------------------

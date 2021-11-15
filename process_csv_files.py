@@ -1,11 +1,11 @@
 #----------------------------------------------------
-# Python prgram to process csv files:
+# Python program to process csv files:
 # -> Below program is intended to showcase some 
 #    Python functionalities to process data 
 #    from csv files.
 #
-#    The program needs to process a new incoming file
-#    and set its identifies by file name prefix 
+#    The program will process any new incoming file and
+#    set its ip detils identifies by file name prefix 
 #----------------------------------------------------
 
 #----------------------------------------------------
